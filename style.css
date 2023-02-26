@@ -1,0 +1,175 @@
+/* Define estilos para todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Define estilos para o elemento body */
+body {
+    /* Alinha o conteúdo do body ao centro e distribui em forma de coluna (eixo principal é vertical) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Define a cor de fundo do body como cinza escuro */
+    background-color: #1f242d;
+    /* Define a altura mínima do body como 100% da altura da tela visível */
+    min-height: 100vh;
+}
+
+/* Define estilos para o elemento 'a' (link) */
+a {
+    /* Define a posição do link como relativa em relação ao elemento pai */
+    position: relative;
+    /* Define o display do link como inline-block */
+    display: inline-block;
+    /* Define a cor do texto do link como branco, com opacidade 40% */
+    color: rgba(255, 255, 255, .4);
+    /* Define o tamanho da fonte do link como 1.5 vezes o tamanho da fonte padrão */
+    font-size: 1.5em;
+    /* Define o espaçamento entre as letras do link */
+    letter-spacing: .1em;
+    /* Remove a decoração de texto sublinhado do link */
+    text-decoration: none;
+    /* Transforma todo o texto do link em letras maiúsculas */
+    text-transform: uppercase;
+    /* Define a cor de fundo do link como cinza escuro */
+    background-color: #262c37;
+    /* Define o preenchimento do link */
+    padding: 10px 30px;
+    /* Define a duração da transição quando o link é focado */
+    transition: .5s;
+}
+
+/* Define estilos para o elemento 'a' quando o cursor do mouse está sobre ele */
+a:hover {
+    /* Define a cor do texto do link como ciano claro */
+    color: #00eeff;
+    /* Aumenta o espaçamento entre as letras do link */
+    letter-spacing: .25em;
+    /* Define uma sombra ao redor do texto do link */
+    text-shadow: 0 0 5px #00eeff;
+    /* Define o atraso da transição para a sombra do link */
+    transition-delay: 1ms;
+}
+
+/* Define estilos para os elementos 'span' dentro do elemento 'a' */
+a span {
+    /* Define a posição do elemento como absoluta em relação ao elemento pai (o link) */
+    position: absolute;
+    /* Define o display do elemento como bloco */
+    display: block;
+    /* Define a cor de fundo do elemento como ciano claro */
+    background: #00eeff;
+    /* Define uma sombra ao redor do elemento */
+    box-shadow: 0 0 5px #00eeff;
+}
+
+/* Define o posicionamento e o tamanho da primeira linha horizontal */
+a span:nth-child(1) {
+    /* Define a posição do elemento como esquerda e superior em relação ao elemento pai */
+    left: 0;
+    top: 0;
+    /* Define a largura do elemento como 50.5% da largura do link */
+    width: 50.5%;
+    /* Define a altura do elemento como 1.5 pixels */
+    height: 1.5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/* Define o efeito de sublinhado na primeira linha horizontal quando o mouse passa por cima do link */
+a:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+/* Define o posicionamento e o tamanho da segunda linha horizontal */
+a span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/* Define o efeito de sublinhado na segunda linha horizontal quando o mouse passa por cima do link */
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Define o posicionamento e o tamanho da linha vertical à esquerda */
+a span:nth-child(3) {
+    left: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform: scaley(0);
+    transform-origin: bottom;
+    transition: transform .5s;
+    transition-delay: .4;
+}
+
+/* Define o efeito de sublinhado na linha vertical à esquerda quando o mouse passa por cima do link */
+a:hover span:nth-child(3) {
+    transform: scaley(1);
+    transform-origin: top;
+}
+
+/* Define o posicionamento e o tamanho da linha vertical à direita */
+a span:nth-child(4) {
+    right: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform: scaley(0);
+    transform-origin: bottom;
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+/* Define o efeito de sublinhado na linha vertical à direita quando o mouse passa por cima do link */
+a:hover span:nth-child(4) {
+    transform: scaley(1);
+    transform-origin: top;
+}
+
+/* Define o posicionamento e o tamanho da terceira linha horizontal */
+a span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+/* Define o efeito de sublinhado na terceira linha horizontal quando o mouse passa por cima do link */
+a:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Define o posicionamento e o tamanho da quarta linha horizontal */
+
+a span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+/* Define o efeito de sublinhado na quarta linha horizontal quando o mouse passa por cima do link */
+
+a:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
